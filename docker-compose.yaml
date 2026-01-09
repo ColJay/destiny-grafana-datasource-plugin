@@ -10,5 +10,5 @@ services:
     ports:
       - 3000:3000/tcp
     volumes:
-      - ./dist:/var/lib/grafana/plugins/joshhunt-destiny-datasource
-      - ./provisioning:/etc/grafana/provisioning
+      - /Users/colineltringham/Personal-Projects/grafana-plugins/destiny-grafana-datasource-plugin/dist:/var/lib/grafana/plugins/joshhunt-destiny-datasource
+      - /Users/colineltringham/Personal-Projects/grafana-plugins/destiny-grafana-datasource-plugin/provisioning:/etc/grafana/provisioning

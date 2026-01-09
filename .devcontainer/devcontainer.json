@@ -1,0 +1,19 @@
+{
+  "name": "Destiny Plugin Dev",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:22-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/go:1": { "version": "1.19" },
+    // This is the magic part! It installs the Docker CLI inside your container
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+      "version": "latest",
+      "enableNonRootDocker": "true"
+    }
+  },
+  "remoteUser": "node",
+  "customizations": {
+    "vscode": {
+      "extensions": ["golang.Go", "dbaeumer.vscode-eslint"]
+    }
+  },
+  "postCreateCommand": "sudo corepack enable && npm install && go install github.com/magefile/mage@latest"
+}
